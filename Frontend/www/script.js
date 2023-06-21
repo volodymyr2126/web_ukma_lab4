@@ -472,7 +472,10 @@ function downloadLocal(){
         total_sum.textContent = total_price + "грн"
     }
 }
-downloadLocal()
+if(localStorage.getItem("pizzaList")!==null){
+    downloadLocal()
+}
+
 function increase(){
     let order = event.target.closest(".ordered-item");
     let quantity = order.querySelector(".amount")
