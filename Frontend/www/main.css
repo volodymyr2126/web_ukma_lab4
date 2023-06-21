@@ -563,7 +563,10 @@ img{
 .footer span{
     display: block;
 }
-@media(max-width: 365px) {
+@media(max-width: 730px) {
+    .ordered-item .details .size{
+        width: 40px;
+    }
     .body{
         display: none;
     }
@@ -578,17 +581,14 @@ img{
         margin-top: 100px;
     }
 
-    .discount{
-        display: none;
-    }
     .header{
         width: 100%;
     }
-    .footer{
-       display: none;
-    }
+
     .list{
+        justify-content: center;
         position: absolute;
+        width: 100%;
         top: 800px;
     }
     .buy-section{
