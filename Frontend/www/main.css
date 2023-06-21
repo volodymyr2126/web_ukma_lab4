@@ -106,7 +106,7 @@ body{
     z-index: 3;
 }
 .list{
-    min-width: 330px;
+    min-width: 350px;
     position: absolute;
     top:150px;
     display: flex;
@@ -116,7 +116,7 @@ body{
     width:calc(100% - 350px);
     height: fit-content;
     background-color: #fffff6;
-    overflow: auto;
+    overflow: visible;
 }
 .pizza-filters{
     display: flex;
@@ -187,6 +187,7 @@ body{
     height: 640px;
     background-color: #ffffff;
     z-index: 1;
+    overflow: visible;
 }
 img{
     width: 95%;
@@ -533,8 +534,8 @@ img{
     height: 25px;
     width: 100px;
     position: relative;
-    left: 75%;
-    bottom: 100%;
+    right: -75%;
+    top: -100%;
     background-color: #72b763;
     color: white;
     font-weight: bold;
@@ -561,4 +562,37 @@ img{
 }
 .footer span{
     display: block;
+}
+@media(max-width: 365px) {
+    .body{
+        display: none;
+    }
+    .cart{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-left: 0;
+        min-width: 350px;
+        z-index: 1;
+        box-shadow: none;
+        margin-top: 100px;
+    }
+
+    .discount{
+        display: none;
+    }
+    .header{
+        width: 100%;
+    }
+    .footer{
+       display: none;
+    }
+    .list{
+        position: absolute;
+        top: 800px;
+    }
+    .buy-section{
+        position: relative;
+        bottom:0;
+    }
 }
